@@ -16,8 +16,7 @@ An end-to-end SIEM pipeline bridging wave physics and network intelligence. This
 * **Visualization:** Engineered an interactive graph using **NetworkX** and **Plotly** to map AI-detected anomalies to physical/logical nodes.
 * **Impact:** Enables SOC analysts to visualize network segmentation and isolate compromised segments (e.g., IoT gateways or Edge routers) before lateral movement occurs.
 
-![Network Topology and Dashboard Documentation](DOCUMENTATIONS & ASSETS)
-
+![Network Dashboard](DOCUMENTATIONS%20&%20ASSETS/DOCUMENTATION%201.png)
 ---
 
 ## Technical Stack
