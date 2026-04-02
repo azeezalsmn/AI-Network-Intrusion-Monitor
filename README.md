@@ -4,7 +4,7 @@ End-to-end SIEM pipeline: 100k+ network logs processed via Python, analyzed with
 # Network Intrusion Monitoring with ML-Based Anomaly Scoring
 **Automated NIDS pipeline using Elastic Stack and Scikit-Learn for high-volume traffic analysis.**
 
-![Network Security Dashboard](https://cba1331aa66c421a80c1268bf0532caf.us-central1.gcp.cloud.es.io/app/r/s/gL2JZ)
+![Network Security Dashboard](DOCUMENTATIONS)
 
 ## Technical Overview
 This project addresses the challenge of identifying malicious patterns within high-volume network traffic. Using a subset of the **CIC-IDS2017 dataset** (100,000+ records), I developed a pipeline that cleans raw network flows, calculates anomaly scores using an unsupervised model, and provides a forensic interface for security analysts.
