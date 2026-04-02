@@ -1,49 +1,45 @@
 # AI-Network-Intrusion-Monitor
 End-to-end SIEM pipeline: 100k+ network logs processed via Python, analyzed with Isolation Forest ML for anomaly detection, and visualized on an Elastic/Kibana dashboard for real-time threat forensics.
 
-# 🛡️ AI-Driven Network Intrusion Detection System (NIDS)
-### Real-Time Anomaly Detection with Isolation Forest & Elastic Stack
+# Network Intrusion Monitoring with ML-Based Anomaly Scoring
+**Automated NIDS pipeline using Elastic Stack and Scikit-Learn for high-volume traffic analysis.**
 
 ![Network Security Dashboard](YOUR_SCREENSHOT_LINK_HERE)
 
-## 📌 Project Overview
-This project demonstrates a production-grade **Security Information and Event Management (SIEM)** pipeline. It processes over 100,000 raw network logs, applies unsupervised **Machine Learning** to score anomalies, and visualizes threats for a Security Operations Center (SOC) environment.
+## Technical Overview
+This project addresses the challenge of identifying malicious patterns within high-volume network traffic. Using a subset of the **CIC-IDS2017 dataset** (100,000+ records), I developed a pipeline that cleans raw network flows, calculates anomaly scores using an unsupervised model, and provides a forensic interface for security analysts.
 
-Developed as part of a technical portfolio for **Telecommunication Engineering**, this system reduces "alert fatigue" by highlighting high-risk traffic patterns (DoS, Portscan) using AI.
+## Implementation Workflow
 
----
+### 1. Feature Engineering & Modeling (Python)
+* **Pre-processing:** Cleaned and normalized flow features including Source/Destination Ports, Flow Duration, and Packet Length using **Pandas** and **NumPy**.
+* **Model:** Implemented **Isolation Forest** (unsupervised learning) to identify outliers and generate a normalized `anomaly_score`.
+* **Output:** Generated binary `is_anomaly` flags to streamline threat prioritization.
 
-## 🚀 Technical Architecture
-The pipeline follows a modern data engineering workflow:
-1. **Data Engineering:** Pre-processing the CIC-IDS dataset (100k+ rows) using **Python & Pandas**.
-2. **Machine Learning:** Implementing an **Isolation Forest** model to calculate `anomaly_score` (0.0 to 1.0).
-3. **Data Ingestion:** Indexing enriched JSON data into **Elasticsearch** via Elastic Cloud.
-4. **Visualization:** Designing a forensic **Kibana Dashboard** for threat distribution and temporal analysis.
+### 2. Data Infrastructure (Elasticsearch)
+* **Ingestion:** Configured custom index mapping in **Elasticsearch** to handle time-series network telemetry.
+* **Optimization:** Tuned index settings for 100k+ documents to ensure low-latency filtering and real-time dashboard updates.
 
+### 3. Forensic Visualization (Kibana)
+* **Telemetry Timeline:** Time-series analysis correlating traffic spikes with AI-generated anomaly scores.
+* **Attack Profiling:** Distribution analysis of identified threats including DoS Hulk, Slowloris, and Portscanning.
+* **Incident Drill-down:** Integrated a raw document table for investigating specific service ports (e.g., Port 80/443) targeted during detected anomalies.
 
+## Technical Stack & Competencies
+* **Languages:** Python (Scikit-Learn, Pandas, NumPy)
+* **Infrastructure:** Elasticsearch, Kibana (Elastic Stack)
+* **Domain Knowledge:** Network Security, Telecommunications, Data-driven Optimization
 
----
-
-## 📊 Dashboard Features
-* **Attack Distribution (Pie Chart):** High-level breakdown of Benign vs. Malicious traffic (DoS Hulk, Slowloris, etc.).
-* **Anomaly Timeline (Area Chart):** Real-time visualization of when the AI model flags suspicious behavior.
-* **Forensic Table:** Detailed raw log view including `@timestamp`, `destination_port`, and `is_anomaly` flags.
-
----
-
-## 🛠️ Tools & Technologies
-* **Languages:** Python 3.10
-* **ML Libraries:** Scikit-Learn, NumPy
-* **Platform:** Elastic Stack (Elasticsearch 8.x, Kibana)
-* **Dataset:** CIC-IDS2017 (Network Traffic)
+## Project Impact
+By automating anomaly detection, this system enables a Security Operations Center (SOC) to prioritize high-risk traffic, significantly reducing the manual effort required for log review and improving response times to network-level threats.
 
 ---
 
-## 💡 Key Insights
-* **Pattern Recognition:** Successfully identified Portscan attempts targeting specific service ports (80, 443).
-* **AI Accuracy:** The Isolation Forest model effectively separated high-volume DoS attacks from normal background traffic with minimal false positives.
+## About the Author
+**Azeeza Agrippina Lesmana**
+* **Telecommunication Engineering** at Sepuluh Nopember Institute of Technology (ITS).
+* **Research Intern** for eLORAN Signal Propagation & Navigation Systems Engineering in collaboration with **Gauss Research Foundation, Netherlands**.
+* **IISMA Government Scholar** at Università di Pisa, Italy (Engineering Dept.).
+* **Head Laboratory Assistant** at the Antenna and Propagation Laboratory - ITS.
 
----
-
-## 👤 About the Author
-**Your Name** *Telecommunication Engineering @ Sepuluh Nopember Institute of Technology (ITS)* *IISMA Scholar | University of Pisa* [LinkedIn](YOUR_LINKEDIN_URL) | [Portfolio](YOUR_WEBSITE_URL)
+[LinkedIn](https://linkedin.com/in/azeezalsmn) | azeezalsmn@gmail.com
