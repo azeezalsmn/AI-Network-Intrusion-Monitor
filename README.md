@@ -18,6 +18,7 @@ An end-to-end SIEM pipeline bridging wave physics and network intelligence. This
 * **Impact:** Enables SOC analysts to visualize network segmentation and isolate compromised segments (e.g., IoT gateways or Edge routers) before lateral movement occurs.
 
 ![Network Topology](DOCUMENTATIONS%20&%20ASSETS/TOPOLOGY.png)
+![Improved Network Topology](DOCUMENTATIONS%20&%20ASSETS/TOPOLOGY%20%28IMPROVED%29.png)
 ---
 
 ## Technical Stack
