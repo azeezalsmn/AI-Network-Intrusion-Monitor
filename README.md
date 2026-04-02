@@ -26,5 +26,5 @@ An end-to-end SIEM pipeline bridging wave physics and network intelligence. This
 * **Domain:** Network Security, eLORAN Navigation, Signal Propagation
 
 ## About the Author
-**Azeeza Agrippina Lesmana** Telecommunication Engineering @ ITS | IISMA Scholar @ UniPisa | NTU Alumna  
-*Specializing in the intersection of physical infrastructure and digital intelligence.*
+**Azeeza Agrippina Lesmana** | Telecommunication Engineering @ ITS | IISMA Scholar @ UniPisa | INSPIRASI-NTU Alumna  
+*Special interests include physical infrastructure and digital intelligence.*
