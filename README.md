@@ -11,12 +11,13 @@ An end-to-end SIEM pipeline bridging wave physics and network intelligence. This
 ### 2. Forensic Visualization (Elastic Stack)
 * **Ingestion:** Configured custom index mapping in **Elasticsearch** for time-series telemetry.
 * **Analysis:** Developed **Kibana** dashboards for attack profiling (DoS, Portscanning) and real-time incident drill-downs.
+![Network Dashboard](DOCUMENTATIONS%20&%20ASSETS/DOCUMENTATION%201.png)
 
 ### 3. Infrastructure Topology Mapping (New)
 * **Visualization:** Engineered an interactive graph using **NetworkX** and **Plotly** to map AI-detected anomalies to physical/logical nodes.
 * **Impact:** Enables SOC analysts to visualize network segmentation and isolate compromised segments (e.g., IoT gateways or Edge routers) before lateral movement occurs.
 
-![Network Dashboard](DOCUMENTATIONS%20&%20ASSETS/DOCUMENTATION%201.png)
+![Network Topology](DOCUMENTATIONS%20&%20ASSETS/TOPOLOGY.png)
 ---
 
 ## Technical Stack
