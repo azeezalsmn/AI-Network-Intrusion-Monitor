@@ -20,6 +20,10 @@ An end-to-end SIEM pipeline bridging wave physics and network intelligence. This
 ![Network Topology](DOCUMENTATIONS%20&%20ASSETS/NETWORK%20TOPOLOGY.png)
 ---
 
+### 🌐 Interactive Topology Map
+Click the link below to explore the network nodes, device types, and anomaly status in real-time.
+[👉 View Interactive Dashboard](https://htmlpreview.github.io/?https://github.com/azeezalsmn/AI-Network-Intrusion-Monitor/blob/main/network_topology.html)
+
 ## Technical Stack
 * **Languages:** Python (Scikit-Learn, NetworkX, Plotly)
 * **Infrastructure:** Elasticsearch, Kibana (Elastic Stack)
