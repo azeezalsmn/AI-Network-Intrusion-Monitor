@@ -1,45 +1,30 @@
-# AI-Network-Intrusion-Monitor
-End-to-end SIEM pipeline: 100k+ network logs processed via Python, analyzed with Isolation Forest ML for anomaly detection, and visualized on an Elastic/Kibana dashboard for real-time threat forensics.
+# Network Anomaly Detection & Topology Mapping
 
-# Network Intrusion Monitoring with ML-Based Anomaly Scoring
-**Automated NIDS pipeline using Elastic Stack and Scikit-Learn for high-volume traffic analysis.**
-
-![Network Security Dashboard](DOCUMENTATIONS)
-
-## Technical Overview
-This project addresses the challenge of identifying malicious patterns within high-volume network traffic. Using a subset of the **CIC-IDS2017 dataset** (100,000+ records), I developed a pipeline that cleans raw network flows, calculates anomaly scores using an unsupervised model, and provides a forensic interface for security analysts.
+An end-to-end SIEM pipeline bridging wave physics and network intelligence. This system processes 100k+ network logs via Python, identifies threats with Isolation Forest ML, and maps the "blast radius" onto a dynamic infrastructure landscape.
 
 ## Implementation Workflow
 
 ### 1. Feature Engineering & Modeling (Python)
-* **Pre-processing:** Cleaned and normalized flow features including Source/Destination Ports, Flow Duration, and Packet Length using **Pandas** and **NumPy**.
+* **Pre-processing:** Cleaned 100,000+ records of raw network flows using Pandas/NumPy.
 * **Model:** Implemented **Isolation Forest** (unsupervised learning) to identify outliers and generate a normalized `anomaly_score`.
-* **Output:** Generated binary `is_anomaly` flags to streamline threat prioritization.
 
-### 2. Data Infrastructure (Elasticsearch)
-* **Ingestion:** Configured custom index mapping in **Elasticsearch** to handle time-series network telemetry.
-* **Optimization:** Tuned index settings for 100k+ documents to ensure low-latency filtering and real-time dashboard updates.
+### 2. Forensic Visualization (Elastic Stack)
+* **Ingestion:** Configured custom index mapping in **Elasticsearch** for time-series telemetry.
+* **Analysis:** Developed **Kibana** dashboards for attack profiling (DoS, Portscanning) and real-time incident drill-downs.
 
-### 3. Forensic Visualization (Kibana)
-* **Telemetry Timeline:** Time-series analysis correlating traffic spikes with AI-generated anomaly scores.
-* **Attack Profiling:** Distribution analysis of identified threats including DoS Hulk, Slowloris, and Portscanning.
-* **Incident Drill-down:** Integrated a raw document table for investigating specific service ports (e.g., Port 80/443) targeted during detected anomalies.
+### 3. Infrastructure Topology Mapping (New)
+* **Visualization:** Engineered an interactive graph using **NetworkX** and **Plotly** to map AI-detected anomalies to physical/logical nodes.
+* **Impact:** Enables SOC analysts to visualize network segmentation and isolate compromised segments (e.g., IoT gateways or Edge routers) before lateral movement occurs.
 
-## Technical Stack & Competencies
-* **Languages:** Python (Scikit-Learn, Pandas, NumPy)
-* **Infrastructure:** Elasticsearch, Kibana (Elastic Stack)
-* **Domain Knowledge:** Network Security, Telecommunications, Data-driven Optimization
-
-## Project Impact
-By automating anomaly detection, this system enables a Security Operations Center (SOC) to prioritize high-risk traffic, significantly reducing the manual effort required for log review and improving response times to network-level threats.
+![Network Topology and Dashboard Documentation]()
 
 ---
 
-## About the Author
-**Azeeza Agrippina Lesmana**
-* **Telecommunication Engineering** at Sepuluh Nopember Institute of Technology (ITS).
-* **Research Intern** for eLORAN Signal Propagation & Navigation Systems Engineering in collaboration with **Gauss Research Foundation, Netherlands**.
-* **IISMA Government Scholar** at Università di Pisa, Italy (Engineering Dept.).
-* **Head Laboratory Assistant** at the Antenna and Propagation Laboratory - ITS.
+## Technical Stack
+* **Languages:** Python (Scikit-Learn, NetworkX, Plotly)
+* **Infrastructure:** Elasticsearch, Kibana (Elastic Stack)
+* **Domain:** Network Security, eLORAN Navigation, Signal Propagation
 
-[LinkedIn](https://linkedin.com/in/azeezalsmn) | azeezalsmn@gmail.com
+## About the Author
+**Azeeza Agrippina Lesmana** Telecommunication Engineering @ ITS | IISMA Scholar @ UniPisa | NTU Alumna  
+*Specializing in the intersection of physical infrastructure and digital intelligence.*
